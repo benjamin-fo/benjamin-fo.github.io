@@ -1,0 +1,65 @@
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        height: auto;
+        padding: 20px 0;
+    }
+
+    .icons {
+        width: 80px;
+        height: 80px;
+        margin: 40px 0;
+        padding: 8px;
+    }
+
+    /* Suppression de ::before sur mobile */
+    .icons::before {
+        display: none;
+    }
+
+    .icons::after {
+        margin: 12px;
+        border-radius: 2px 50% 2px 50%;
+        background-size: 100% 0%;
+    }
+
+    .icons:hover::after {
+        border-radius: 2px 60% 2px 50%;
+        box-shadow: 3px 6px var(--color-bg-blue);
+    }
+
+    .icons img {
+        transform: scale(0.6);
+    }
+
+    .name {
+        width: 120%;
+        padding: 0 6px;
+        margin-left: -2vh;
+        font-size: 0.9rem;
+    }
+
+    .name::before {
+        border-radius: 6px 40% 6px 40%;
+    }
+
+    .name span {
+        font-size: 0.9rem;
+    }
+
+    .wip-card {
+        padding: 0 20px;
+    }
+
+    .wip-card::before,
+    .wip-card::after {
+        padding: 0 20px;
+    }
+
+    #wip {
+        padding: 15px;
+        font-size: 1rem;
+    }
+}
