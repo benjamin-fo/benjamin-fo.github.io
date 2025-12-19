@@ -1,0 +1,180 @@
+:root {
+    --bg: #f7f7fb;
+    --axis: #d8d8ee;
+    --text: #555;
+    --theme-1: #a5d8ff;
+    --theme-2: #ffd6a5;
+    --theme-3: #caffbf;
+}
+
+
+    .horizontal-timeline {
+      width: 90%;
+      max-width: 1100px;
+    }
+
+    /* X axis */
+    .x-axis {
+      position: relative;
+      height: 40px;
+      border-top: 2px solid var(--color-bg-blue);
+      margin-left: 140px;
+      margin-bottom: 40px;
+    }
+
+    .x-tick {
+      position: absolute;
+      bottom: -6px;
+      transform: translateX(-50%);
+      color: var(--accent);
+    }
+
+    .x-tick::before {
+      content: "";
+      position: absolute;
+      top: -12px;
+      left: 50%;
+      width: 2px;
+      height: 12px;
+      background: var(--color-bg-blue);
+      transform: translateX(-50%);
+      
+    }
+
+    /* Rows */
+    .row {
+      display: grid;
+      grid-template-columns: 160px 1fr;
+      align-items: center;
+      margin-bottom: 36px;
+    }
+
+    .label {
+      color: var(--text);
+      font-size: 16px;
+    }
+
+    
+
+    .track {
+      position: relative;
+      height: 30px;
+      background: var(--text);
+      border-radius: 6px;
+      overflow: hidden;
+    }
+
+    .iconbtn{
+      transform: scale(1.6);
+      margin-right: 10px;
+      padding: 2px;
+      background-color: var(--secondary);
+      cursor: pointer;
+      border-radius: 2px;
+      box-shadow: 0 2px 2px var(--text);
+    }
+
+    .iconbtn:hover{
+      box-shadow: 0 3px 3px rgba(0, 0, 0, 1);
+    }
+
+    .progress {
+      position: absolute;
+      height: 100%;
+      width: 0;
+      border-radius: 6px;
+      animation: grow 2s ease forwards;
+    }
+
+    .theme-1 { background: var(--theme-1); animation-delay: 0.2s; }
+    .theme-2 { background: var(--theme-2); animation-delay: 0.5s; }
+    .theme-3 { background: var(--theme-3); animation-delay: 0.8s; }
+
+    @keyframes grow {
+      from { width: 0; }
+      to { width: 100%; }
+    }
+
+    /* Events */
+    .event {
+      position: absolute;
+      top: 50%;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: white;
+      border: 3px solid currentColor;
+      transform: translate(-50%, -50%) scale(0);
+      animation: pop 0.4s ease forwards;
+      z-index: 1;
+    }
+
+    .event-label {
+      position: absolute;
+      right: 15px;
+      top: -8px;
+      white-space: nowrap;
+      text-decoration: none;
+      color: inherit;
+      cursor: pointer;
+    }
+
+    .event-label:hover{
+      color: black;
+      font-weight: bold;
+    }
+
+    .episode:hover{
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 1);
+      font-weight: bold;
+    }
+    
+    
+
+    .episode p a{
+      text-decoration: none ;
+      color: var(--text);
+    }
+
+    .event p a{
+      text-decoration: none ;
+      color: var(--text) ;
+    }
+
+    .episode{
+        position: absolute;
+        z-index: 0;
+        
+        left: var(--start);
+        width: calc(var(--end) - var(--start));
+        height: fit-content;
+        border-radius: 6px;
+        border: 1px solid var(--text);
+        animation: grow-episode 0.6s ease forwards;
+        color: var(--text);
+        animation-delay: var(--delay);
+        scale: 0 1;
+
+    }
+
+    .episode p{
+        text-align: center;
+    }
+
+    .event[data-delay] {
+      animation-delay: var(--delay);
+    }
+
+    
+
+    @keyframes pop {
+      to { transform: translate(-50%, -50%) scale(1); }
+    }
+
+    @keyframes grow-episode {
+        to {
+        scale: 1 1; /* modern syntax */
+        }
+    }
+    
+    

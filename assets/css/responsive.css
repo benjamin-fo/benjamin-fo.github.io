@@ -1,0 +1,285 @@
+/* =========================================
+   EN DESSOUS DE 1200px → BACKGROUND ONLY
+========================================= */
+@media (max-width: 1199px) {
+
+  /* Cache tout visuellement */
+  body * {
+    visibility: hidden;
+  }
+
+  /* Garde le background */
+  body {
+    min-height: 100vh;
+    margin: 0;
+    background-color: var(--primary-bg);
+  }
+
+  /* Réaffiche UNIQUEMENT .responsive */
+  .responsive,
+  .responsive * {
+    visibility: visible;
+  }
+
+  .responsive {
+    position: fixed;
+    inset: 0;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+
+    padding: 1.5rem;
+    text-align: center;
+  }
+
+  .responsive p {
+    max-width: 32rem;              
+    width: 100%;
+    margin: 0;
+
+    font-family: 'Poppins', sans-serif;
+    font-size: clamp(0.9rem, 4vw, 1.2rem);
+    line-height: 1.6;
+
+    color: var(--text);
+    background: var(--card-bg);
+    padding: 1.2rem 1.5rem;
+    border-radius: 12px;
+
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+
+    
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+}
+
+
+
+@media (max-width: 768px) {
+  #leftwave,
+  #middlewave,
+  #rightwave {
+    display: none !important;
+  }
+}
+
+@media (max-width: 992px) {
+  * {
+    float: none !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .banner {
+    margin: 1rem auto;
+    width: 100%;
+    height: auto;
+    padding: 1.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    margin: 2rem auto;
+  }
+
+  .in {
+    padding: 1.2rem;
+  }
+}
+
+
+/* ==========================================================
+   BASE : corrections globales
+========================================================== */
+
+/* Empêche les débordements horizontaux */
+html, body {
+  
+  overflow-x: hidden;
+}
+
+/* Stop floats en responsive */
+@media (max-width: 992px) {
+  * {
+    float: none !important;
+  }
+}
+
+/* Containers fluides */
+.container,
+.in,
+.banner,
+nav {
+  max-width: 100%;
+}
+
+/* ==========================================================
+   LAPTOP ≤ 1200px
+========================================================== */
+
+@media (max-width: 1200px) {
+
+  
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .connect {
+    justify-content: center;
+  }
+}
+
+/* ==========================================================
+   TABLETTE ≤ 992px
+========================================================== */
+
+@media (max-width: 992px) {
+
+  /* HEADER */
+  .header h1 {
+    font-size: 2.2rem;
+  }
+
+  /* NAV */
+  nav {
+    position: static;
+    width: 100%;
+    margin: 2rem auto;
+    text-align: center;
+  }
+
+  nav ul {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  /* BANNER */
+  .banner {
+    height: auto;
+    margin-top: 0;
+    padding: 1.5rem;
+  }
+
+  /* CONTENT */
+  .in {
+    margin: 0;
+  }
+
+  /* WAVES → on les désactive */
+  #leftwave,
+  #middlewave,
+  #rightwave {
+    display: none;
+  }
+
+  /* TIMELINE verticale */
+  .timeline {
+    left: 1rem;
+  }
+
+  .startdate,
+  .specify {
+    position: static;
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* ==========================================================
+   MOBILE ≤ 768px
+========================================================== */
+
+@media (max-width: 768px) {
+
+  h1 { font-size: 1.8rem; }
+  h2 { font-size: 1.5rem; }
+  h3 { font-size: 1.3rem; }
+
+  body {
+    padding: 1rem;
+  }
+
+  .card {
+    padding: 1.2rem;
+  }
+
+  /* NAV verticale */
+  nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  /* LISTES */
+  ul {
+    width: 100%;
+  }
+
+  li.card {
+    border-radius: 12px;
+  }
+
+  /* FOLDER CARD */
+  .folder-card::before,
+  .folder-card::after {
+    position: static;
+    width: auto;
+    height: auto;
+    margin-bottom: 0.5rem;
+    border-radius: 12px;
+  }
+
+  /* TIMELINE horizontale → scroll */
+  .horizontal-timeline {
+    overflow-x: auto;
+    padding-bottom: 1rem;
+  }
+
+  .x-axis {
+    margin-left: 0;
+  }
+
+  .row {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+
+  .label {
+    font-weight: bold;
+  }
+}
+
+/* ==========================================================
+   PETIT MOBILE ≤ 480px
+========================================================== */
+
+@media (max-width: 480px) {
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  .card {
+    border-radius: 8px;
+  }
+
+  .icon,
+  .iconbtn {
+    transform: scale(1.2);
+  }
+
+  .event-label {
+    font-size: 12px;
+  }
+}
