@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Fonts - Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/folder.css">
+    <link rel="stylesheet" href="assets/css/timeline.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" />
+    <title>Mon CV</title>
+</head>
+<body>
+    
+    <div class="embed">
+        <header class="header card">
+            <h1>Benjamin Fontaine</h1>
+        </header>
+        <nav>
+            <ul>
+                <div class="card">
+                    <li class="card active"><a href="index.html">Resumé</a></li>
+                </div>
+                <div class="card">
+                    <li class="card"><a href="./formation.html">Formation</a></li>
+                </div>
+                <div class="card">
+                    <li class="card"><a href="./experience.html">Experience</a></li>
+                </div>
+            </ul>
+            <div class="banner">
+                <div class="connect" style="margin-left: 30%;"><p><a href="https://github.com/benjamin-fo" target="_blank"><i class="fa-brands fa-github icon"></i></a></p></div>    
+                <div class="connect" style="margin-left: 45%;"><p><a href="#"><i class="fa-brands fa-square-linkedin icon"></i></a></p></div>
+                <div class="connect" style="margin-left: 60%;"><p><a href="mailto:benjamin.fontaine1@univ-grenoble-alpes.fr" target="_blank"><i class="fa-solid fa-envelope icon"></i></a></p></div>
+
+                <p>Actuellement en doctorat au <b>Laboratoire d'Informatique de Grenoble</b> (LIG). Mon sujet de recherche porte sur la <b>conception</b> de <b>solutions de collecte</b> de données <b>SHS</b> pour les <b>parcours de vie</b>. Encadré par des <u>informaticiens</u> (LIG), <u>sociologues</u> et <u>démographes</u> (ESO, Ined), j'évolue au sein de l'équipe <u>STORIES</u> avec comme objet d'étude principal les <b>trajectoires sémantiques</b>.</p>
+            </div>
+        </nav>
+    </div>
+
+    
+    <div id='wave'>
+        <div id='leftwave' class="card"></div>
+        <div id='middlewave' class="card"></div>
+    </div>
+
+    <main class="container">
+        <section id="experience" class="card">
+            <h2>Résumé</h2>
+                <div class="horizontal-timeline">
+
+                    
+                    <div class="row">
+                        <p class="label"><i id="loc_for" class="fa-regular fa-map iconbtn"></i> Formation</p>
+                        
+                        
+                        <div class="track">
+                            <div class="progress theme-1"></div>
+                            
+                            <div class="event theme-1" style="left: 47.5%; --delay: 1.4s;" ></div>
+                            <div class="event theme-1" style="left: 72.5%; --delay: 1.8s;" ></div>
+                            <div class="episode theme-1" style="--start: 10%; --end: 47.5%; --delay: 1s;" data-loc="UPPA (Pau)"><p><a href="./formation.html#licence">Licence Informatique</a></p></div>
+                            <div class="episode theme-1" style="--start: 47.5%; --end: 72.5%; --delay: 1.4s;"data-loc="UPPA (Pau)"><p><a href="./formation.html#master">Master Informatique</a></p></div>
+                            <div class="episode theme-1" style="--start: 72.5%; --end: 100%; --delay: 1.8s;"data-loc="LIG (Grenoble)"><p><a href="./formation.html#doctorat">Doctorat 🖥️</a></p></div>
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+                        <p class="label"><i id="loc_exp" class="fa-regular fa-map iconbtn"></i> Experience</p>
+                        <div class="track">
+                            <div class="progress theme-2"></div>
+                            <div class="event theme-2" style="left: 60%; --delay: 1.1s;" data-loc="Pau"><p><a href="./experience.html#guestbook" class="event-label">Projet tutoré</a></p></div>
+                            <div class="event theme-2" style="left: 70%; --delay: 1.6s;" data-loc="Anglet"><p><a href="./experience.html#skilltag" class="event-label">Stage</a></p></div>
+
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <p class="label"><i id="loc_ens" class="fa-regular fa-map iconbtn"></i> Enseignement</p>
+                        <div class="track">
+                            <div class="progress theme-3"></div>
+                            <div class="event theme-3" style="left: 85%; --delay: 1.2s;" data-loc="IUT2 (Grenoble)"><p><a href="./experience.html#tests" class="event-label">Test en programmation</a></p></div>
+                            <div class="event theme-3" style="left: 97.5%; --delay: 1.7s;" data-loc="IUT2"><p><a href="./experience.html#bash" class="event-label">BASH</a></p></div>
+                        </div>
+                    </div>
+
+                    
+                    <div class="x-axis">
+                        <div class="x-tick" style="left: 10%">2019</div>
+                        <div class="x-tick" style="left: 35%">2021</div>
+                        <div class="x-tick" style="left: 60%">2023</div>
+                        <div class="x-tick" style="left: 85%">2025</div>
+                    </div>
+                </div>
+        </section>
+
+        
+        <div class="responsive"><p>Le responsive arrive bientôt... Pour le moment, essayez de consulter ce site sur un ordinateur ou une surface plus large</p></div>
+        
+    </main>
+
+    <script src="assets/js/main.js"></script>
+    
+</body>
+</html>
